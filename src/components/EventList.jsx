@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import io from "socket.io-client";
 import EventCard from './EventCard';
 
-const socket = io("http://localhost:5000");
+const socket = io("https://event-management-backend-jgy8.onrender.com");
 
 const EventList = ({events}) => {
   const [token,setToken]= useState(null);
@@ -29,7 +29,7 @@ const EventList = ({events}) => {
   }, []);
 
   const handleJoinEvent = (eventId) => {
-    fetch("http://localhost:5000/api/events/join", {
+    fetch("https://event-management-backend-jgy8.onrender.com/api/events/join", {
       method: "POST",
       headers: { 
         "Content-Type": "application/json",

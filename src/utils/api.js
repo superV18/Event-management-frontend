@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://localhost:5000/api";
+const API_BASE_URL = "https://event-management-backend-jgy8.onrender.com/api";
 
 export const fetchEvents = async () => {
   const response = await fetch(`${API_BASE_URL}/events`);

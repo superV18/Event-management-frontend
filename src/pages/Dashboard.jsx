@@ -10,7 +10,7 @@ const Dashboard = () => {
   }, []);
 
   const fetchEvents = () => {
-    fetch("http://localhost:5000/api/events")
+    fetch("https://event-management-backend-jgy8.onrender.com/api/events")
       .then(res => res.json())
       .then(data => setEvents(data))      
       .catch((error) => console.error('Error fetching events:', error));

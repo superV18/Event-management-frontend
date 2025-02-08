@@ -37,7 +37,7 @@ const EventForm = ({addEvent}) => {
     // Combine date and time into a single ISO string
     const eventDateTime = new Date(`${formData.date}T${formData.time}`).toISOString();
 
-    fetch('http://localhost:5000/api/events', {
+    fetch('https://event-management-backend-jgy8.onrender.com/api/events', {
       method: 'POST',
       headers: { 
         'Content-Type': 'application/json',
